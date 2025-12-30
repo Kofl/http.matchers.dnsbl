@@ -1,0 +1,28 @@
+## SPDX-FileCopyrightText: 2025 Gergely Nagy
+## SPDX-FileContributor: Gergely Nagy
+##
+## SPDX-License-Identifier: EUPL-1.2
+
+name: lint
+
+on: [ push ]
+
+jobs:
+  linting:
+    runs-on: nixos-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: setup magic attic cache
+        uses: actions/magic-attic-cache@main
+        with:
+          CELLAR_TOKEN: ${{ secrets.CELLAR_TOKEN }}
+
+      - name: license check
+        run: reuse lint
+
+      - name: formatting
+        uses: actions/nix/develop@main
+        with:
+          run: treefmt --ci

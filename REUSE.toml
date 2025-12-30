@@ -1,0 +1,15 @@
+# SPDX-FileCopyrightText: 2025 Gergely Nagy
+# SPDX-FileContributor: Gergely Nagy
+#
+# SPDX-License-Identifier: EUPL-1.2
+#
+version = 1
+SPDX-PackageName = "http.matchers.dnsbl"
+SPDX-PackageSupplier = "Gergely Nagy"
+SPDX-PackageDownloadLocation = "https://git.madhouse-project.org/caddy/http.matchers.dnsbl"
+
+[[annotations]]
+  path = ["README.md", "go.mod", "go.sum", "flake.lock"]
+  precedence = "aggregate"
+  SPDX-FileCopyrightText = "2024 Gergely Nagy"
+  SPDX-License-Identifier = "EUPL-1.2"

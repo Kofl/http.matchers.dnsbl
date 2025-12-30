@@ -1,0 +1,12 @@
+# SPDX-FileCopyrightText: 2025 Gergely Nagy
+# SPDX-FileContributor: Gergely Nagy
+#
+# SPDX-License-Identifier: EUPL-1.2
+
+# Files to ignore
+/LICENSES/*.txt  linguist-vendored
+/flake.lock      linguist-generated
+go.mod           linguist-generated
+go.sum           linguist-generated
+
+*.nix            -linguist-detectable
